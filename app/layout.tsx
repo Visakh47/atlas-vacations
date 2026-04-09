@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: "A personal atlas of adventures, beautifully documented vacations from around the world.",
   openGraph: {
     title: "The Atlas of VB",
-    description: "A personal atlas of adventuresm beautifully documented vacations from around the world.",
+    description: "A personal atlas of adventures, beautifully documented vacations from around the world.",
     url: "https://vb-atlas.vercel.app",
     siteName: "The Atlas of VB",
     type: "website",
