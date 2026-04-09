@@ -9,6 +9,9 @@ day_number,date,item_name,category_id,sub_category_id,amount_total,currency,note
 1,2026-03-15,Phone Charger,shopping,electronics,160000,IDR,
 1,2026-03-15,KitKat & Water,food,snacks,17000,IDR,
 1,2026-03-15,Parking,misc,parking,10000,IDR,
+1,2026-03-15,Bali SIM Card,misc,misc,236700,IDR,Converted from ₹1315 INR
+1,2026-03-15,This Is Bali Restaurant,food,meals,336000,IDR,
+1,2026-03-15,Conditioners / Indomie / Groceries,food,snacks,67500,IDR,
 2,2026-03-16,ATV Ride,activities,atv,500000,IDR,
 2,2026-03-16,Ayung River Rafting,activities,rafting,700000,IDR,Includes lunch
 2,2026-03-16,Tips & Coca Cola,misc,tips,50000,IDR,
@@ -28,7 +31,7 @@ day_number,date,item_name,category_id,sub_category_id,amount_total,currency,note
 4,2026-03-18,Sari Timbul Entrance & Food,activities,sightseeing,440000,IDR,
 4,2026-03-18,Medicines,shopping,pharmacy,50000,IDR,
 4,2026-03-18,Dinner,food,meals,200000,IDR,
-5,2026-03-19,Ferry to Nusa Penida,transport,ferry,270000,IDR,Converted from ₹1500 INR total
+5,2026-03-19,Ferry to Nusa Penida,transport,ferry,320000,IDR,Converted from ₹1730 INR total
 5,2026-03-19,Premium Ferry Seating,transport,ferry,100000,IDR,
 5,2026-03-19,Grab Taxi,transport,taxi,100000,IDR,
 5,2026-03-19,Biscuits & Water,food,snacks,13000,IDR,
@@ -48,7 +51,7 @@ day_number,date,item_name,category_id,sub_category_id,amount_total,currency,note
 6,2026-03-20,Laundry,misc,misc,23000,IDR,
 6,2026-03-20,Dinner at Mambo Beach Resort,food,meals,417000,IDR,
 6,2026-03-20,Sprite & Doritos,food,snacks,27000,IDR,
-7,2026-03-21,Ferry Back to Bali,transport,ferry,270000,IDR,Converted from ₹1500 INR total
+7,2026-03-21,Ferry Back to Bali,transport,ferry,320000,IDR,Converted from ₹1730 INR total
 7,2026-03-21,Premium Ferry Seats,transport,ferry,100000,IDR,
 7,2026-03-21,Grab Taxi,transport,taxi,105000,IDR,
 7,2026-03-21,Snacks & Water,food,snacks,14000,IDR,
@@ -69,7 +72,7 @@ day_number,date,item_name,category_id,sub_category_id,amount_total,currency,note
 8,2026-03-22,Parking,misc,parking,5000,IDR,
 8,2026-03-22,Snacks & Drinks,food,snacks,83000,IDR,
 8,2026-03-22,Bali Galleria Parking,misc,parking,4000,IDR,
-8,2026-03-22,Uniqlo Shopping,shopping,clothing,800000,IDR,
+8,2026-03-22,Uniqlo Shopping,shopping,clothing,700000,IDR,
 9,2026-03-23,Coffee & Doritos,food,coffee,35000,IDR,
 9,2026-03-23,Chicken Teriyaki Lunch,food,meals,52000,IDR,
 9,2026-03-23,Mall Parking,misc,parking,5000,IDR,
@@ -85,3 +88,4 @@ day_number,date,item_name,category_id,sub_category_id,amount_total,currency,note
 10,2026-03-24,Grab Taxi to Airport,transport,taxi,125000,IDR,
 10,2026-03-24,Coke,food,drinks,15000,IDR,
 10,2026-03-24,Lunch at Singapore Airport,food,meals,216000,IDR,Converted from ₹1200 INR
+10,2026-03-24,Souvenirs at Singapore Airport,shopping,souvenirs,196200,IDR,Converted from ₹1090 INR
