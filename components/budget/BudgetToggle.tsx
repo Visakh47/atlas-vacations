@@ -9,23 +9,32 @@ interface BudgetToggleProps {
 export function BudgetToggle({ isIndividual, onToggle, peopleCount }: BudgetToggleProps) {
   return (
     <div
-      className="inline-flex items-center rounded-lg p-0.5 gap-0.5"
-      style={{ backgroundColor: 'var(--a-surface)', border: '1px solid var(--a-border)' }}
+      className="flex items-center w-full rounded-2xl p-1.5 gap-1.5"
+      style={{ backgroundColor: 'var(--a-raised)', border: '1px solid var(--a-border2)' }}
     >
       {[
-        { label: 'Per person', value: true },
-        { label: `Total (${peopleCount})`, value: false },
-      ].map(({ label, value }) => (
+        { label: 'Per person', icon: '👤', value: true },
+        { label: `Total (${peopleCount})`, icon: '👥', value: false },
+      ].map(({ label, icon, value }) => (
         <button
           key={label}
           onClick={() => isIndividual !== value && onToggle()}
-          className="px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-150"
+          className="flex flex-1 items-center justify-center gap-2 px-3 py-2.5 rounded-xl font-medium transition-all duration-200 whitespace-nowrap"
           style={
             isIndividual === value
-              ? { backgroundColor: 'var(--a-raised)', color: 'var(--a-text)', border: '1px solid var(--a-border2)' }
-              : { color: 'var(--a-muted)' }
+              ? {
+                  backgroundColor: 'var(--a-accent)',
+                  color: '#fff',
+                  fontSize: '0.875rem',
+                  boxShadow: '0 1px 4px rgba(180,83,9,0.25)',
+                }
+              : {
+                  color: 'var(--a-muted)',
+                  fontSize: '0.875rem',
+                }
           }
         >
+          <span style={{ fontSize: '0.95rem', lineHeight: 1 }}>{icon}</span>
           {label}
         </button>
       ))}

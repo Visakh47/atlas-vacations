@@ -14,27 +14,36 @@ export function CurrencyToggle({ nativeCode, nativeSymbol, showNative, onToggle 
   if (!conversion) return null;
 
   const options = [
-    { label: `${conversion.symbol} ${conversion.code}`, value: false },
-    { label: `${nativeSymbol} ${nativeCode}`, value: true },
+    { symbol: conversion.symbol, code: conversion.code, icon: '🏠', value: false },
+    { symbol: nativeSymbol, code: nativeCode, icon: '✈️', value: true },
   ];
 
   return (
     <div
-      className="inline-flex items-center rounded-lg p-0.5 gap-0.5"
-      style={{ backgroundColor: 'var(--a-surface)', border: '1px solid var(--a-border)' }}
+      className="flex items-center w-full rounded-2xl p-1.5 gap-1.5"
+      style={{ backgroundColor: 'var(--a-raised)', border: '1px solid var(--a-border2)' }}
     >
-      {options.map(({ label, value }) => (
+      {options.map(({ symbol, code, icon, value }) => (
         <button
-          key={label}
+          key={code}
           onClick={() => showNative !== value && onToggle()}
-          className="px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-150"
+          className="flex flex-1 items-center justify-center gap-2.5 px-5 py-2.5 rounded-xl font-medium transition-all duration-200"
           style={
             showNative === value
-              ? { backgroundColor: 'var(--a-raised)', color: 'var(--a-text)', border: '1px solid var(--a-border2)' }
-              : { color: 'var(--a-muted)', border: '1px solid transparent' }
+              ? {
+                  backgroundColor: 'var(--a-accent)',
+                  color: '#fff',
+                  fontSize: '0.9rem',
+                  boxShadow: '0 1px 4px rgba(180,83,9,0.25)',
+                }
+              : {
+                  color: 'var(--a-muted)',
+                  fontSize: '0.9rem',
+                }
           }
         >
-          {label}
+          <span style={{ fontSize: '1rem', lineHeight: 1 }}>{icon}</span>
+          <span>{symbol} {code}</span>
         </button>
       ))}
     </div>
