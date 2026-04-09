@@ -1,3 +1,13 @@
 id,name,country,flag_emoji,start_date,end_date,days_count,people_count,tagline,status,currency_code,currency_symbol,summary
-bali-2026,Bali,Indonesia,🇮🇩,2026-03-28,2026-04-06,10,2,Miami meets Kodaikanal Vibes,published,IDR,Rp,10 days across Ubud, Nusa Penida & Seminyak, the dramatic cliffs of Nusa Penida, and Seminyak's beaches — sunrises on volcanoes, hidden waterfalls, Kecak dances, and legendary ribs at Naughty Nuri's.
-switzerland-2025,Switzerland,Switzerland,🇨🇭,2025-12-20,2025-12-28,8,2,Snow-capped peaks and chocolate valleys,draft,CHF,CHF,8 days in the Swiss Alps — skiing in Zermatt and exploring the old town of Lucerne in the heart of winter.
+bali-2026,Bali,Indonesia,🇮🇩,2026-03-28,2026-04-06,10,2,Miami meets Kodaikanal Vibes,published,IDR,Rp,"10 days across Ubud's jungle villas, the dramatic cliffs of Nusa Penida, and Seminyak's beaches — sunrises on volcanoes, hidden waterfalls, Kecak dances, and legendary ribs at Naughty Nuri's."
+dubai-2025,Dubai,UAE,🇦🇪,2025-01-14,2025-01-20,6,2,Towers dunes and gold-tinted everything,view_only,AED,AED,
+stuttgart-2024,Stuttgart,Germany,🇩🇪,2024-10-20,2024-10-21,2,3,Autumn in the Swabian heartland,view_only,EUR,€,
+zurich-2024,Zurich,Switzerland,🇨🇭,2024-10-19,2024-10-20,2,4,Mountain air and Swiss precision,view_only,CHF,CHF,
+weingarten-2024,Weingarten,Germany,🇩🇪,2024-10-16,2024-10-19,3,2,Vineyards quiet roads and cold October air,view_only,EUR,€,
+barcelona-2024,Barcelona,Spain,🇪🇸,2024-10-13,2024-10-16,3,2,Gaudí and the gothic quarter at dusk,view_only,EUR,€,
+mallorca-2024,Mallorca,Spain,🇪🇸,2024-10-09,2024-10-13,4,2,Mediterranean coves before the crowds leave,view_only,EUR,€,
+naples-2024,Naples,Italy,🇮🇹,2024-10-07,2024-10-09,2,1,Pizza chaos and Vesuvius on the horizon,view_only,EUR,€,
+athens-2024,Athens,Greece,🇬🇷,2024-10-04,2024-10-07,3,1,2500 years of history in three October days,view_only,EUR,€,
+singapore-2023,Singapore,Singapore,🇸🇬,2023-10-20,2023-10-27,7,2,The city-state that does everything right,view_only,SGD,S$,
+tokyo,Tokyo,Japan,🇯🇵,,,0,0,Neon ramen and cherry blossom dreams,upcoming,JPY,¥,
+south-korea,South Korea,South Korea,🇰🇷,,,0,0,K-culture street food and mountain temples,upcoming,KRW,₩,

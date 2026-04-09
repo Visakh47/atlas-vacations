@@ -1,4 +1,4 @@
-export type VacationStatus = 'published' | 'draft';
+export type VacationStatus = 'published' | 'draft' | 'view_only' | 'upcoming';
 
 export interface Vacation {
   id: string;
