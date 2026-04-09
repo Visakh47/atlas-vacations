@@ -36,18 +36,18 @@ export function SpendByDayBarChart({
         <BarChart data={data} margin={{ top: 24, right: 4, bottom: 0, left: 4 }} barCategoryGap="30%">
           <defs>
             <linearGradient id="barAccent" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#4ADE80" stopOpacity={1} />
-              <stop offset="100%" stopColor="#22C55E" stopOpacity={0.8} />
+              <stop offset="0%" style={{ stopColor: 'var(--a-accent)' }} stopOpacity={1} />
+              <stop offset="100%" style={{ stopColor: 'var(--a-accent-dark)' }} stopOpacity={0.9} />
             </linearGradient>
             <linearGradient id="barMuted" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#1E4028" stopOpacity={1} />
-              <stop offset="100%" stopColor="#16301C" stopOpacity={1} />
+              <stop offset="0%" style={{ stopColor: 'var(--a-dim)' }} stopOpacity={1} />
+              <stop offset="100%" style={{ stopColor: 'var(--a-chart-muted)' }} stopOpacity={1} />
             </linearGradient>
           </defs>
-          <CartesianGrid vertical={false} stroke="#16301C" strokeDasharray="0" />
+          <CartesianGrid vertical={false} stroke="var(--a-border)" strokeDasharray="0" />
           <XAxis
             dataKey="name"
-            tick={{ fontSize: 10, fill: '#557A60' }}
+            tick={{ fontSize: 10, fill: 'var(--a-muted)' }}
             axisLine={false}
             tickLine={false}
             tickFormatter={(v) => `D${v}`}
@@ -59,20 +59,20 @@ export function SpendByDayBarChart({
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             labelFormatter={(label: any) => `Day ${label}`}
             contentStyle={{
-              backgroundColor: '#0A1A0D',
-              border: '1px solid #214530',
+              backgroundColor: 'var(--a-surface)',
+              border: '1px solid var(--a-border)',
               borderRadius: '12px',
               fontSize: '12px',
-              color: '#D5EDD9',
+              color: 'var(--a-text)',
               padding: '8px 12px',
             }}
-            cursor={{ fill: 'rgba(74,222,128,0.05)' }}
+            cursor={{ fill: 'var(--a-raised)' }}
           />
           <Bar dataKey="value" radius={[5, 5, 2, 2]}>
             <LabelList
               dataKey="label"
               position="top"
-              style={{ fontSize: 9, fill: '#557A60' }}
+              style={{ fontSize: 9, fill: 'var(--a-muted)' }}
             />
             {data.map((entry, i) => (
               <Cell

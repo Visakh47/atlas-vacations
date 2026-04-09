@@ -81,15 +81,15 @@ export function SpendDonutChart({
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               formatter={(value: any) => [formatCurrencyAbbrev(Number(value), currencySymbol), '']}
               contentStyle={{
-                backgroundColor: '#0A1A0D',
-                border: '1px solid #214530',
+                backgroundColor: 'var(--a-surface)',
+                border: '1px solid var(--a-border)',
                 borderRadius: '12px',
                 fontSize: '12px',
-                color: '#D5EDD9',
+                color: 'var(--a-text)',
                 padding: '8px 12px',
               }}
-              itemStyle={{ color: '#D5EDD9' }}
-              labelStyle={{ color: '#557A60', marginBottom: '4px' }}
+              itemStyle={{ color: 'var(--a-text)' }}
+              labelStyle={{ color: 'var(--a-muted)', marginBottom: '4px' }}
             />
           </PieChart>
         </ResponsiveContainer>

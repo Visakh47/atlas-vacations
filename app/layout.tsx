@@ -28,11 +28,13 @@ const designTokens = `
     --a-raised:  #EEE5D5;
     --a-border:  #DDD4C0;
     --a-border2: #C4B49A;
-    --a-accent:  #B45309;
-    --a-accent2: #D97706;
-    --a-text:    #1C1410;
-    --a-muted:   #7C6D5A;
-    --a-dim:     #C4B49A;
+    --a-accent:       #B45309;
+    --a-accent2:      #D97706;
+    --a-accent-dark:  #92400E;
+    --a-text:         #1C1410;
+    --a-muted:        #7C6D5A;
+    --a-dim:          #C4B49A;
+    --a-chart-muted:  #A89880;
   }
   .font-display { font-family: var(--font-display, 'Playfair Display', Georgia, serif); }
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

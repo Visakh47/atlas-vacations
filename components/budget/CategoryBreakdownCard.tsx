@@ -41,36 +41,39 @@ export function CategoryBreakdownCard({
       className="rounded-xl border overflow-hidden"
       style={{ backgroundColor: 'var(--a-surface)', borderColor: 'var(--a-border)' }}
     >
-      {/* ── Category header ─────────────────────────────────────────── */}
-      <button
-        className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-[var(--a-raised)] transition-colors"
-        onClick={toggleCategory}
-      >
-        <span className="flex-shrink-0 text-lg">{category.emoji}</span>
-        <span className="flex-1 text-sm font-medium" style={{ color: 'var(--a-text)' }}>
-          {category.category_name}
-        </span>
-        <span className="text-xs px-2 py-0.5 rounded-full flex-shrink-0"
-          style={{ backgroundColor: `${category.hex_color}18`, color: category.hex_color }}>
-          {pct}%
-        </span>
-        <span className="text-sm font-semibold flex-shrink-0" style={{ color: 'var(--a-text)' }}>
-          {formatCurrencyAbbrev(display, currencySymbol)}
-        </span>
-        {hasSubCats && (
-          <span className="text-xs flex-shrink-0" style={{ color: 'var(--a-dim)' }}>
-            {expanded ? '▲' : '▼'}
+      <div
+        className="hover:bg-[var(--a-raised)] transition-colors">
+        {/* ── Category header ─────────────────────────────────────────── */}
+        <button
+          className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-[var(--a-raised)] transition-colors"
+          onClick={toggleCategory}
+        >
+          <span className="flex-shrink-0 text-lg">{category.emoji}</span>
+          <span className="flex-1 text-sm font-medium" style={{ color: 'var(--a-text)' }}>
+            {category.category_name}
           </span>
-        )}
-      </button>
+          <span className="text-xs px-2 py-0.5 rounded-full flex-shrink-0"
+            style={{ backgroundColor: `${category.hex_color}18`, color: category.hex_color }}>
+            {pct}%
+          </span>
+          <span className="text-sm font-semibold flex-shrink-0" style={{ color: 'var(--a-text)' }}>
+            {formatCurrencyAbbrev(display, currencySymbol)}
+          </span>
+          {hasSubCats && (
+            <span className="text-xs flex-shrink-0" style={{ color: 'var(--a-dim)' }}>
+              {expanded ? '▲' : '▼'}
+            </span>
+          )}
+        </button>
 
-      {/* Progress bar */}
-      <div className="px-5 pb-3">
-        <div className="h-1 rounded-full overflow-hidden" style={{ backgroundColor: 'var(--a-border)' }}>
-          <div
-            className="h-full rounded-full transition-all duration-500"
-            style={{ width: `${pct}%`, backgroundColor: category.hex_color }}
-          />
+        {/* Progress bar */}
+        <div className="px-5 pb-3">
+          <div className="h-2 rounded-full overflow-hidden" style={{ backgroundColor: 'var(--a-border)' }}>
+            <div
+              className="h-full rounded-full transition-all duration-500"
+              style={{ width: `${pct}%`, backgroundColor: category.hex_color }}
+            />
+          </div>
         </div>
       </div>
 
@@ -94,7 +97,7 @@ export function CategoryBreakdownCard({
                   <span className="text-xs w-32 truncate flex-shrink-0" style={{ color: 'var(--a-muted)' }}>
                     {sub.sub_category_name}
                   </span>
-                  <div className="flex-1 h-px rounded-full overflow-hidden mx-1"
+                  <div className="flex-1 h-1 rounded-full overflow-hidden mx-1"
                     style={{ backgroundColor: 'var(--a-border)' }}>
                     <div
                       className="h-full rounded-full"

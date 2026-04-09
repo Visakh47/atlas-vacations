@@ -9,11 +9,13 @@
   --a-raised:   #EEE5D5;   /* elevated card / hover            */
   --a-border:   #DDD4C0;   /* default border                   */
   --a-border2:  #C4B49A;   /* active / focus border            */
-  --a-accent:   #B45309;   /* amber accent (use sparingly)     */
-  --a-accent2:  #D97706;   /* softer accent                    */
-  --a-text:     #1C1410;   /* primary text                     */
-  --a-muted:    #7C6D5A;   /* secondary / supporting text      */
-  --a-dim:      #C4B49A;   /* very muted text / placeholders   */
+  --a-accent:       #B45309;   /* amber accent (use sparingly)          */
+  --a-accent2:      #D97706;   /* softer accent                         */
+  --a-accent-dark:  #92400E;   /* darker amber — gradients / hover      */
+  --a-text:         #1C1410;   /* primary text                          */
+  --a-muted:        #7C6D5A;   /* secondary / supporting text           */
+  --a-dim:          #C4B49A;   /* very muted text / placeholders        */
+  --a-chart-muted:  #A89880;   /* muted chart bar bottom stop           */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
 }
