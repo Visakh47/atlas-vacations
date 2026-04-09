@@ -1,0 +1,11 @@
+category_id,category_name,emoji,hex_color
+food,Food & Drink,🍜,#FF6B6B
+transport,Transport,🚗,#4ECDC4
+accommodation,Accommodation,🏨,#45B7D1
+activities,Activities,🏄,#96CEB4
+shopping,Shopping,🛍️,#F9D423
+wellness,Wellness & Spa,💆,#C3B1E1
+misc,Miscellaneous,🎲,#DDA0DD
+flights,Flights,✈️,#74B9FF
+visa,Visa & Entry,🛂,#A29BFE
+insurance,Travel Insurance,🛡️,#55EFC4

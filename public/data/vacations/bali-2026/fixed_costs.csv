@@ -1,0 +1,7 @@
+item_name,category_id,sub_category_id,amount_total,currency,notes
+Return Flights - India to Bali (x2),flights,international,8010000,IDR,Converted from ₹44500 INR total for 2 people.
+Bali Visa on Arrival (x2),visa,visa_on_arrival,1008000,IDR,Converted from ₹5600 INR total for 2 people. Valid 30 days.
+Private Pool Villa - Ubud (4 nights),accommodation,villa,2196000,IDR,Converted from ₹12200 INR. Days 1–4 in Ubud.
+Guest House - Nusa Penida (2 nights),accommodation,hostel,756000,IDR,Converted from ₹4200 INR. Days 5–6 in Nusa Penida.
+Flat - Seminyak (3 nights),accommodation,hotel,1350000,IDR,Converted from ₹7500 INR. Days 7–9 in Seminyak.
+Travel Insurance (x2),insurance,travel,180000,IDR,Converted from ₹1000 INR total for 2 people.

@@ -1,0 +1,43 @@
+parent_category_id,sub_category_id,sub_category_name,emoji
+misc,parking,Parking,🅿️
+misc,fuel,Fuel,⛽
+misc,souvenirs,Souvenirs,🎁
+misc,tips,Tips,💝
+misc,entry_fee,Entry Fee,🎟️
+misc,misc,Other,🎲
+activities,rafting,River Rafting,🚣
+activities,massage,Massage,💆
+activities,atv,ATV Rides,🏍️
+activities,trekking,Trekking,🥾
+activities,sightseeing,Sightseeing,👁️
+activities,entertainment,Entertainment,🎭
+activities,beach,Beach Activities,🏖️
+activities,temple,Temple Visit,🛕
+food,coffee,Coffee & Drinks,☕
+food,meals,Meals,🍽️
+food,snacks,Snacks,🍿
+food,drinks,Drinks & Bar,🍹
+food,dessert,Dessert,🍨
+transport,taxi,Taxi / Grab,🚕
+transport,parking,Parking,🅿️
+transport,fuel,Fuel,⛽
+transport,ferry,Ferry,⛴️
+transport,flight,Domestic Flight,✈️
+transport,scooter,Scooter Rental,🛵
+accommodation,hotel,Hotel,🏨
+accommodation,villa,Villa,🏡
+accommodation,hostel,Hostel,🛏️
+shopping,clothing,Clothing,👗
+shopping,souvenirs,Souvenirs,🎁
+shopping,minimart,Minimart,🏪
+shopping,pharmacy,Pharmacy,💊
+shopping,electronics,Electronics,📱
+wellness,spa,Spa,🛁
+wellness,massage,Massage,💆
+wellness,gym,Gym,🏋️
+flights,international,International Flight,✈️
+flights,domestic,Domestic Flight,🛫
+visa,visa_on_arrival,Visa on Arrival,🛂
+visa,e_visa,E-Visa,💻
+insurance,travel,Travel Insurance,🛡️
+insurance,medical,Medical Insurance,🏥
