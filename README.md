@@ -1,6 +1,6 @@
 # The Atlas of VB
 
-A personal travel journal built as a web app — beautifully documenting vacations with full itineraries, granular budget breakdowns, and per-trip design themes. Each destination gets its own page, its own story, and its own data.
+A personal travel journal built as a web app — beautifully documenting vacations with full itineraries and granular budget breakdowns. Each destination gets its own page, its own story, and its own data.
 
 ---
 
@@ -41,8 +41,7 @@ vacations-project/
 │   ├── shared/                     # App-wide reusables
 │   │   ├── CategoryBadge.tsx
 │   │   ├── RatingStars.tsx
-│   │   ├── LoadingSpinner.tsx
-│   │   └── ThemeProvider.tsx
+│   │   └── LoadingSpinner.tsx
 │   ├── landing/
 │   │   ├── VacationCard.tsx        # Card on homepage grid
 │   │   └── VacationGrid.tsx        # Sorted grid of all vacations
@@ -71,8 +70,7 @@ vacations-project/
 │   ├── useItinerary.ts             # Itinerary days + highlights
 │   ├── useBudget.ts                # Budget entries + computeMetrics()
 │   ├── useFixedCosts.ts            # Fixed cost entries
-│   ├── useCategories.ts            # Category + subcategory taxonomy
-│   └── useTheme.ts                 # Per-vacation theme.json
+│   └── useCategories.ts            # Category + subcategory taxonomy
 │
 ├── lib/
 │   ├── csv-fetcher.ts              # fetchCSV<T>() and fetchJSON<T>() with caching
@@ -80,15 +78,13 @@ vacations-project/
 │   ├── constants.ts                # Data paths + cache TTL
 │   ├── currency-utils.ts           # Formatting, abbreviation, conversion
 │   ├── date-utils.ts               # formatDate, formatDateRange, formatTime
-│   ├── theme-utils.ts              # themeToStyle(), DEFAULT_THEME
 │   └── utils.ts                    # clsx + tailwind-merge
 │
 ├── types/
 │   ├── vacation.ts                 # Vacation interface
 │   ├── budget.ts                   # BudgetEntry, FixedCostEntry, BudgetMetrics, etc.
 │   ├── itinerary.ts                # ItineraryEntry, ItineraryDay
-│   ├── category.ts                 # Category, SubCategory
-│   └── theme.ts                    # VacationTheme, FontStyle
+│   └── category.ts                 # Category, SubCategory
 │
 └── public/data/
     ├── vacations.csv               # All vacation metadata
@@ -99,8 +95,7 @@ vacations-project/
         └── [vacation-id]/
             ├── budget.csv          # Daily expenses
             ├── fixed_costs.csv     # Pre-trip expenses (flights, hotels, etc.)
-            ├── itinerary.csv       # Day-by-day activities
-            └── theme.json          # Custom colors & font
+            └── itinerary.csv       # Day-by-day activities
 ```
 
 ---
@@ -199,7 +194,7 @@ Fluid type sizing uses `clamp()` — e.g. `fontSize: 'clamp(4.5rem, 12vw, 11rem)
 | `days_count` | number | Total days |
 | `people_count` | number | Number of travellers |
 | `tagline` | string | Short descriptor shown on cards |
-| `status` | `published` \| `draft` | Only published vacations are routable |
+| `status` | `published` \| `draft` \| `view_only` \| `upcoming` | Only `published` vacations have accessible routes. `view_only` shows a full card with no link. `upcoming` appears in a separate section with no dates. |
 | `currency_code` | string | ISO code (e.g. `IDR`) |
 | `currency_symbol` | string | Display symbol (e.g. `Rp`) |
 | `summary` | string | Long paragraph shown on the vacation overview page |
@@ -265,24 +260,6 @@ Pre-trip expenses (flights, accommodation, visa, insurance) — same shape as `b
 | `notes` | string | Optional extra notes |
 | `highlight` | `true` \| `false` | Whether this is a trip highlight (shown prominently) |
 
-### `vacations/[id]/theme.json`
-
-```json
-{
-  "primary_color": "#E65C00",
-  "secondary_color": "#F9D423",
-  "accent_color": "#2D6A4F",
-  "bg_color": "#FFFDF7",
-  "text_on_primary": "#FFFFFF",
-  "gradient_from": "#E65C00",
-  "gradient_to": "#F9D423",
-  "card_bg": "#FFF8EE",
-  "font_style": "tropical"
-}
-```
-
-`font_style` options: `modern` · `serif` · `tropical` · `alpine`
-
 ---
 
 ## How to Add a New Vacation
@@ -301,8 +278,7 @@ Set `status` to `draft` while building it out — it appears on the landing page
 public/data/vacations/tokyo-2027/
 ├── budget.csv
 ├── fixed_costs.csv
-├── itinerary.csv
-└── theme.json
+└── itinerary.csv
 ```
 
 ### 3. Add the currency (if new)
@@ -361,27 +337,22 @@ One row per activity, ordered by day and time:
 1,2027-03-10,18:30,Shinjuku Golden Gai,food,bar,"Tiny bars from a different era. Whisky sour and new friends.",500,JPY,5,,true
 ```
 
-### 8. Add `theme.json`
-
-Pick colors that suit the destination's vibe:
-
-```json
-{
-  "primary_color": "#C0392B",
-  "secondary_color": "#E74C3C",
-  "accent_color": "#2ECC71",
-  "bg_color": "#FFFDF9",
-  "text_on_primary": "#FFFFFF",
-  "gradient_from": "#C0392B",
-  "gradient_to": "#E74C3C",
-  "card_bg": "#FFF8F8",
-  "font_style": "modern"
-}
-```
-
-### 9. Publish
+### 8. Publish
 
 Change `status` from `draft` to `published` in `vacations.csv`. The vacation will be fully accessible on the next build.
+
+---
+
+## Generating Data with an LLM
+
+Populating the CSV files from raw travel notes by hand is tedious. [`generate-vacation-data-prompts.md`](./generate-vacation-data-prompts.md) contains four copy-paste prompts — one per data file — that you can drop into any capable LLM (Claude, GPT-4, etc.) to convert rough notes into correctly-formatted CSV rows in one pass.
+
+| Prompt | Output |
+|---|---|
+| Prompt 1 — Itinerary Generator | `itinerary.csv` rows from day notes |
+| Prompt 2 — Budget Generator | `budget.csv` rows from expense lists |
+| Prompt 3 — Fixed Costs Generator | `fixed_costs.csv` rows from pre-trip bookings |
+| Prompt 4 — Vacation Row Generator | `vacations.csv` row for a new destination |
 
 ---
 
