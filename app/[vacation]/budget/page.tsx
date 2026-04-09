@@ -81,7 +81,7 @@ export default function BudgetPage({ params }: { params: Promise<{ vacation: str
           <div className="p-6 space-y-6">
 
             {/* Controls */}
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2.5 [&>*]:w-full">
               <BudgetToggle isIndividual={isIndividual} onToggle={() => setIsIndividual(!isIndividual)} peopleCount={peopleCount} />
               {conversion && (
                 <CurrencyToggle

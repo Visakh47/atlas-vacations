@@ -15,7 +15,7 @@ interface DayViewProps {
 
 export function DayView({ day, categories, currencyCode, currencySymbol, conversionRate = 1 }: DayViewProps) {
   return (
-    <div className="px-8 pt-8 pb-20">
+    <div className="px-4 sm:px-8 pt-8 pb-20">
 
       {/* Day header */}
       <div className="flex items-start justify-between gap-4 mb-8">
@@ -23,7 +23,7 @@ export function DayView({ day, categories, currencyCode, currencySymbol, convers
           <p className="text-xs uppercase tracking-widest mb-1" style={{ color: 'var(--a-muted)' }}>
             Day {day.day_number}
           </p>
-          <h2 className="font-display text-3xl font-semibold" style={{ color: 'var(--a-text)' }}>
+          <h2 className="font-display text-xl sm:text-3xl font-semibold" style={{ color: 'var(--a-text)' }}>
             {formatDate(day.date)}
           </h2>
           {day.highlights.length > 0 && (

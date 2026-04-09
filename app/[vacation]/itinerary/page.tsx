@@ -39,35 +39,62 @@ export default function ItineraryPage({ params }: PageProps) {
 
       {/* Header */}
       <div className="px-6 pt-8 pb-4 border-b flex-shrink-0" style={{ borderColor: 'var(--a-border)' }}>
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="flex items-center gap-2 mb-1 text-xs" style={{ color: 'var(--a-muted)' }}>
-              <Link href={`/${vacationId}`} className="hover:underline">{vacation?.name ?? vacationId}</Link>
-              <span style={{ color: 'var(--a-dim)' }}>→</span>
-              <span style={{ color: 'var(--a-dim)' }}>Itinerary</span>
-            </div>
-            <h1 className="font-display text-2xl font-semibold" style={{ color: 'var(--a-text)' }}>
-              Itinerary
-            </h1>
-          </div>
-          <div className="flex items-center gap-3">
+
+        {/* Breadcrumb */}
+        <div className="flex items-center gap-2 mb-1 text-xs" style={{ color: 'var(--a-muted)' }}>
+          <Link href={`/${vacationId}`} className="hover:underline">{vacation?.name ?? vacationId}</Link>
+          <span style={{ color: 'var(--a-dim)' }}>→</span>
+          <span style={{ color: 'var(--a-dim)' }}>Itinerary</span>
+        </div>
+
+        {/* Title row — desktop: title + toggle + budget link in one row */}
+        <div className="flex items-center justify-between gap-4">
+          <h1 className="font-display text-2xl font-semibold" style={{ color: 'var(--a-text)' }}>
+            Itinerary
+          </h1>
+
+          {/* Desktop controls */}
+          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
             {conversion && (
               <CurrencyToggle
                 nativeCode={currencyCode}
                 nativeSymbol={currencySymbol}
                 showNative={showNative}
                 onToggle={() => setShowNative(!showNative)}
+                compact
               />
             )}
             <Link
               href={`/${vacationId}/budget`}
-              className="text-xs font-medium px-3 py-1.5 rounded-lg border transition-colors hover:border-[var(--a-border2)]"
+              className="text-xs font-medium px-3 py-1.5 rounded-lg border transition-colors hover:border-[var(--a-border2)] whitespace-nowrap"
               style={{ color: 'var(--a-muted)', borderColor: 'var(--a-border)' }}
             >
               Budget →
             </Link>
           </div>
+
+          {/* Mobile: just the budget link */}
+          <Link
+            href={`/${vacationId}/budget`}
+            className="lg:hidden text-xs font-medium px-3 py-1.5 rounded-lg border flex-shrink-0"
+            style={{ color: 'var(--a-muted)', borderColor: 'var(--a-border)' }}
+          >
+            Budget →
+          </Link>
         </div>
+
+        {/* Mobile: currency toggle full width below title */}
+        {conversion && (
+          <div className="lg:hidden mt-3">
+            <CurrencyToggle
+              nativeCode={currencyCode}
+              nativeSymbol={currencySymbol}
+              showNative={showNative}
+              onToggle={() => setShowNative(!showNative)}
+              compact
+            />
+          </div>
+        )}
       </div>
 
       {/* Mobile: horizontal day tabs */}
