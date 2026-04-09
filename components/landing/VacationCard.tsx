@@ -126,7 +126,7 @@ export function VacationCard({ vacation }: VacationCardProps) {
           )}
         </div>
         <div
-          className="flex items-center justify-between px-8 py-4 border-t"
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-between px-8 py-4 border-t gap-3 sm:gap-0"
           style={{ borderColor: 'var(--a-border)', backgroundColor: 'var(--a-raised)' }}
         >
           <div className="flex items-center gap-4 text-xs" style={{ color: 'var(--a-dim)' }}>
